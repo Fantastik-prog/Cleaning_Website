@@ -1,0 +1,328 @@
+/* ==========================================================================
+   QUOTATION FORM PAGE STYLES (cotizacion.html)
+   ========================================================================== */
+
+.cotizacion-body {
+    background-color: #F7F9FC;
+}
+
+/* 1. TOP HERO BANNER & WAVE */
+.quote-hero {
+    background-color: var(--primary);
+    position: relative;
+    padding: 60px 24px 80px 24px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.quote-hero-container h1 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.quote-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.quote-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+}
+
+/* 2. FORM CONTAINER & CARDS */
+.quote-page-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 20px 80px 20px;
+}
+
+.quote-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #E2E8F0;
+}
+
+.quote-card h3 {
+    font-size: 1.35rem;
+    color: var(--text-dark);
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.card-title-center {
+    text-align: center;
+    color: #475569 !important;
+    font-weight: 500 !important;
+}
+
+/* ==========================================================================
+   LIMPIEZA EMPRESARIAL DROPDOWN & INPUT STYLING
+   ========================================================================== */
+
+.custom-select-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: #334155;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 16px;
+}
+
+.custom-select-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 94, 255, 0.1);
+}
+
+.custom-select-input option {
+    padding: 10px;
+    color: #1E293B;
+}
+
+/* Highlighted selected option color matching corporate blue */
+.custom-select-input option:checked {
+    background-color: #1E5EFF !important;
+    color: #ffffff !important;
+}
+
+/* 3. SERVICE SELECTION GRID */
+.service-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.service-option-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.service-option-card input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.option-content {
+    border: 1px solid #CBD5E1;
+    border-radius: 12px;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.2s ease;
+    background: #ffffff;
+    height: 100%;
+}
+
+.option-content i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.option-content span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #334155;
+    line-height: 1.2;
+}
+
+/* Selected State */
+.service-option-card input[type="checkbox"]:checked + .option-content {
+    border-color: var(--primary);
+    background-color: #F0F4FF;
+    box-shadow: 0 4px 12px rgba(30, 94, 255, 0.15);
+}
+
+/* 4. CHECKBOX OPTIONS ROWS */
+.sub-group {
+    margin-bottom: 20px;
+}
+
+.group-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+.checkbox-options-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #475569;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+/* 5. FORM INPUT FIELDS */
+.form-grid-stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid #CBD5E1;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background: #ffffff;
+    transition: border-color 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 94, 255, 0.1);
+}
+
+/* 6. SUBMIT BUTTON */
+.form-submit-wrapper {
+    text-align: center;
+    margin-top: 32px;
+}
+
+.btn-submit-quote {
+    background-color: var(--primary);
+    color: #ffffff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 16px 48px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(30, 94, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-submit-quote:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 94, 255, 0.4);
+}
+
+/* RESPONSIVE BREAKPOINTS FOR FORM */
+@media (max-width: 992px) {
+    .service-selector-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .quote-hero-container h1 {
+        font-size: 2rem;
+    }
+
+    .service-selector-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quote-card {
+        padding: 20px;
+    }
+
+    .checkbox-options-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+/* ==========================================================================
+   LOAD MORE SERVICES BUTTON & HIDDEN CARDS ANIMATION
+   ========================================================================== */
+
+/* Hide additional cards initially */
+.service-card.hidden-service {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+/* Shown state when toggled */
+.service-card.hidden-service.show-card {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button Wrapper Alignment */
+.more-services-wrapper {
+    text-align: center;
+    margin-top: 48px;
+}
+
+/* Outline Button Style matching Corporate Blue (#1E5EFF) */
+.btn-primary-outline {
+    background: #ffffff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 14px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(30, 94, 255, 0.08);
+}
+
+.btn-primary-outline:hover {
+    background: var(--primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 94, 255, 0.25);
+}
+
+.btn-primary-outline i {
+    transition: transform 0.3s ease;
+}
+
+.btn-primary-outline.expanded i {
+    transform: rotate(180deg);
+}
